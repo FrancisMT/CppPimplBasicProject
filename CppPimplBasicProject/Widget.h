@@ -24,10 +24,10 @@ public:
 	~Widget();
 
 	// Copy Constructor
-	Widget(Widget const& OtherWidget);
+	Widget(const Widget& OtherWidget);
 
 	// Move Contructor
-	Widget(Widget&&);
+	Widget(Widget&& OtherWidget);
 
 	// Assignment Operator
 	Widget& operator=(Widget&&) = default;

@@ -39,10 +39,11 @@ Widget::Widget()
 
 Widget::~Widget() = default;
 
-Widget::Widget(Widget const & OtherWidget) {
+Widget::Widget(const Widget& OtherWidget) {
+	Pimpl = std::make_unique<Impl>();
 	Pimpl->PublicVector = OtherWidget.Pimpl->PublicVector;
 }
 
-Widget::Widget(Widget &&) {
-	this.Pimpl;
+Widget::Widget(Widget && OtherWidget) {
+	Pimpl = std::move(OtherWidget.Pimpl);
 }
